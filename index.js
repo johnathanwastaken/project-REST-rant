@@ -8,15 +8,15 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
 app.get('/', (req, res) => {
-    res.send("<h1>Home</h1>");
+    res.render("index");
 });
 
-//Places
-const placesController = require("./controllers/places.js");
-app.use("/places", placesController);
+// //Places
+// const placesController = require("./controllers/places.js");
+// app.use("/places", placesController);
 
 app.get('*', (req, res) => {
-    res.render('<h1>404 Page</h1>');
+    res.render('error404');
 });
 
 app.listen(process.env.PORT)

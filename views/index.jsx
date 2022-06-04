@@ -6,6 +6,7 @@ function home () {
         <Def>
             <main>
                 <h1>Home</h1>
+                <p>TEST</p>
             </main>
         </Def>
     )
