@@ -1,9 +1,9 @@
-const router = require('express').Router()
-const place = express.Router();
+const place = require('express').Router()
+
 
 // INDEX
-place.get('/', (req, res) =>{
-    res.send('GET /places')
+place.get('/', (req, res) => {
+    res.render("index")
 })
 
 // NEW
@@ -11,5 +11,10 @@ place.get("/new", (req, res) => {
     res.render("new");
 })
 
-
-module.exports = router
+//EDIT
+place.get('/:indexArrray/edit', (req, res) => {
+    res.render('edit', {
+        place: place[req.params.indexArrray]
+    })
+})
+module.exports = place
