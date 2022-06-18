@@ -3,7 +3,7 @@ const place = require('express').Router()
 
 // INDEX
 place.get('/', (req, res) => {
-    res.render("index")
+    res.render("places/index")
 })
 
 // NEW
